@@ -1,10 +1,13 @@
-package soundsystem;
+package ch2.java_config;
 
-import config.CDPlayerConfig;
+import ch2.java_config.config.CDPlayerConfig;
+import ch2.java_config.soundsystem.CompactDisc;
+import ch2.java_config.soundsystem.MediaPlayer;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -15,6 +18,7 @@ import javax.inject.Inject;
 public class CDPlayerTest {
 
     @Autowired
+    @Qualifier("player1")
     private MediaPlayer player;
 
     @Inject
