@@ -1,8 +1,7 @@
-package ch2.java_config;
+package ch2.xml_config;
 
-import ch2.java_config.config.CDPlayerConfig;
-import ch2.java_config.soundsystem.CompactDisc;
-import ch2.java_config.soundsystem.MediaPlayer;
+import ch2.xml_config.soundsystem.Discography;
+import ch2.xml_config.soundsystem.MediaPlayer;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -11,27 +10,21 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import javax.inject.Inject;
-
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = CDPlayerConfig.class)
-public class CDPlayerTest {
+@ContextConfiguration(locations = "classpath:spring/xml_config/ch2-configuration.xml")
+public class XmlConfigurationTest {
 
     @Autowired
-    @Qualifier("player1")
+    @Qualifier("cdPlayer2")
     private MediaPlayer player;
 
-    @Inject
-    private CompactDisc cd;
-
-    @Test
-    public void cdShouldNotBeNull() {
-        Assert.assertNotNull(cd);
-    }
+    @Autowired
+    private Discography discography;
 
     @Test
     public void play() {
+        Assert.assertNotNull(discography);
         Assert.assertNotNull(player);
-        player.play();
+        discography.playAll();
     }
 }

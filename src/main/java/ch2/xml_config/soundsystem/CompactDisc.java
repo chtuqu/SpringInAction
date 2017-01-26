@@ -1,4 +1,4 @@
-package ch2.automatic_configuration.soundsystem;
+package ch2.xml_config.soundsystem;
 
 public interface CompactDisc {
     void play();
