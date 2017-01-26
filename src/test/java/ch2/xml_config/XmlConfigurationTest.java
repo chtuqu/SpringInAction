@@ -11,7 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring/xml_config/ch2-configuration.xml")
+@ContextConfiguration(locations = "classpath:spring/ch2/xml_config/ch2-configuration.xml")
 public class XmlConfigurationTest {
 
     @Autowired

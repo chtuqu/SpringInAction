@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="classpath*:spring/xml_config/discographies.xml"/>
-    <import resource="classpath*:spring/xml_config/albums.xml"/>
-    <import resource="classpath*:spring/xml_config/players.xml"/>
+    <import resource="classpath*:spring/ch2/xml_config/discographies.xml"/>
+    <import resource="classpath*:spring/ch2/xml_config/albums.xml"/>
+    <import resource="classpath*:spring/ch2/xml_config/players.xml"/>
 
 </beans>
