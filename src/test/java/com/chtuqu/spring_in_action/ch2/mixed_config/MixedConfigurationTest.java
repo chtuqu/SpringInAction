@@ -20,11 +20,16 @@ public class MixedConfigurationTest {
     private CompactDisc abbeyRoad;
 
     @Autowired
+    @Qualifier("sgtPeppers")
+    private CompactDisc sgtPeppers;
+
+    @Autowired
     @Qualifier("cdPlayer")
     private MediaPlayer cdPlayer;
 
     @Test
     public void play() {
+        Assert.assertNotNull(sgtPeppers);
         Assert.assertNotNull(abbeyRoad);
         Assert.assertNotNull(cdPlayer);
         cdPlayer.play();

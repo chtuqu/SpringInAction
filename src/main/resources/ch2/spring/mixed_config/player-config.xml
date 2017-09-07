@@ -5,8 +5,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <import resource="classpath*:ch2/spring/xml_config/discographies.xml"/>
-    <import resource="classpath*:ch2/spring/xml_config/albums.xml"/>
-    <import resource="classpath*:ch2/spring/xml_config/players.xml"/>
+    <bean id="cdPlayer" class="com.chtuqu.spring_in_action.ch2.mixed_config.soundsystem.CDPlayer">
+        <constructor-arg ref="yellowSubmarine"/>
+    </bean>
 
 </beans>

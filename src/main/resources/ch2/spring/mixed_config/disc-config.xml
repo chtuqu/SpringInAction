@@ -17,10 +17,8 @@
         </property>
     </bean>
 
-    <bean class="com.chtuqu.spring_in_action.ch2.mixed_config.config.YellowSubmarineConfig"/>
+    <bean class="com.chtuqu.spring_in_action.ch2.mixed_config.config.SgtPeppersConfig"/>
 
-    <bean id="cdPlayer" class="com.chtuqu.spring_in_action.ch2.mixed_config.soundsystem.CDPlayer">
-        <constructor-arg ref="yellowSubmarine"/>
-    </bean>
+    <import resource="classpath*:ch2/spring/mixed_config/player-config.xml"/>
 
 </beans>
