@@ -11,7 +11,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 // NOTE: uncomment Java or XML config below
-//@ContextConfiguration(classes = EnvConfig.class)
+@ContextConfiguration(classes = EnvConfig.class)
 //@ContextConfiguration(locations = "classpath:ch3/environment_profiles/env-config.xml")
 @ActiveProfiles("dev")
 public class EnvProfilesTest {
