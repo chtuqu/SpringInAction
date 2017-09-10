@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="singleton" class="com.chtuqu.spring_in_action.ch3.MyComponent">
+        <constructor-arg value="singleton"/>
+    </bean>
+
+    <bean id="prototype1" class="com.chtuqu.spring_in_action.ch3.MyComponent" scope="prototype">
+        <constructor-arg value="prototype1"/>
+    </bean>
+
+    <bean id="prototype2" class="com.chtuqu.spring_in_action.ch3.MyComponent" scope="prototype">
+        <constructor-arg value="prototype2"/>
+    </bean>
+
+</beans>

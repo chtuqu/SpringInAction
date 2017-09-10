@@ -10,7 +10,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
+// NOTE: uncomment Java or XML config below
 @ContextConfiguration(classes = ScopeConfig.class)
+//@ContextConfiguration(locations = "classpath:ch3/scope-cfg.xml")
 public class ScopeTest {
 
     @Autowired
